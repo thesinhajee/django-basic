@@ -1,0 +1,14 @@
+<h1>STOP THE COUNT!</h1>
+
+<a href="{% url 'home' %}">Home Page</a>
+
+<br/>
+<h2>There are {{count}} words in your text, which is:-</h2>
+<br/>
+{{textbox}}
+<h2>Word Count</h2>
+
+{% for word,counts in dictword%}
+{{word}}-{{counts}}
+<br/>
+{% endfor %}
